@@ -1,6 +1,17 @@
 extends ../includes/layout
 
 block main-content
+    .navbar.navbar-inverse.navbar-fixed-top
+        .container
+            .navbar-header
+                a.navbar-brand(href="/") Laura's Resume
+                  h6 She really doesn't like her current job
+                .navbar-collapse.collapse
+                  ul.nav.navbar-nav
+                    li
+                      a(href="/") Home
     section.content
         div(ng-view)
-    h2= mongoMessage
+
+    footer.container.text-center
+        p &copy; 2013 Laura's Awesome Corp International Ltd.
