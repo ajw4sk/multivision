@@ -2,8 +2,7 @@
  * Created by awippl on 3/19/2016.
  */
 
-
-angular.module('app').controller('mainCtrl', function($scope) {
+angular.module('app').controller('mvMainCtrl', function($scope) {
     $scope.courses = [
         {name: 'C# for Sociopaths', featured: true, published: new Date('10/5/2013')},
         {name: 'C# for Non-Sociopaths', featured: true, published: new Date('10/12/2013')},
@@ -21,4 +20,5 @@ angular.module('app').controller('mainCtrl', function($scope) {
         {name: 'How to Deal with Narcissistic Coworkers', featured: true, published: new Date('2/15/2013')},
         {name: 'Death March Coding for Fun and Profit', featured: true, published: new Date('7/1/2013')}
     ]
+
 });
