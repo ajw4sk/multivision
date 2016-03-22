@@ -1,21 +1,16 @@
-/**
- * Created by awippl on 3/20/2016.
- */
 var passport = require('passport'),
     mongoose = require('mongoose'),
     LocalStrategy = require('passport-local').Strategy,
     User = mongoose.model('User');
 
 module.exports = function() {
-    var User = mongoose.model('User');
     passport.use(new LocalStrategy(
-        function(username, password, done){
+        function(username, password, done) {
             User.findOne({username:username}).exec(function(err, user) {
                 if(user && user.authenticate(password)) {
                     return done(null, user);
                 } else {
                     return done(null, false);
-
                 }
             })
         }
@@ -36,4 +31,5 @@ module.exports = function() {
             }
         })
     })
+
 }

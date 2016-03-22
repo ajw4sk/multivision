@@ -1,6 +1,3 @@
-/**
- * Created by awippl on 3/20/2016.
- */
 angular.module('app').factory('mvIdentity', function($window, mvUser) {
     var currentUser;
     if(!!$window.bootstrappedUserObject) {

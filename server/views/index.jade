@@ -1,17 +1,19 @@
 extends ../includes/layout
 
 block main-content
-
     .navbar.navbar-inverse.navbar-fixed-top
         .container
             .navbar-header
                 a.navbar-brand(href="/") MultiVision
-                  h6 -Extreme Tech Training
+                    h6 -Extreme Tech Training
             .navbar-collapse.collapse
-                  ul.nav.navbar-nav
+                ul.nav.navbar-nav
                     li
-                      a(href="/") Home
-                  div(ng-include="'/partials/account/navbar-login'")
+                        a(href="/") Home
+                    li
+                        a(href="/courses") Courses
+                div(ng-include="'/partials/account/navbar-login'")
+
     section.content
         div(ng-view)
 
